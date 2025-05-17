@@ -2,6 +2,8 @@ import json
 import os
 import re
 from openai import OpenAI
+from app.pdf_generator import gerar_pdf
+
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -31,5 +33,7 @@ def extrair_dados(mensagem: str) -> dict:
 
     json_limpo = json_match.group(0)
     dados = json.loads(json_limpo)
-    
+
+    gerar_pdf(dados)
+
     return dados
