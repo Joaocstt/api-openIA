@@ -1,0 +1,4 @@
+{
+  "system": "Você é um assistente que extrai dados específicos de textos.",
+  "user": "Extraia do texto abaixo apenas as seguintes informações:\n- Nome do Cliente\n- Endereço\n- Data e Horário da Entrega\n- Telefone do Comprador\n- Telefone do Recebedor\n- Produto\n\nRetorne somente em formato JSON com as chaves:\n\"cliente\", \"endereco\", \"data_hora_entrega\", \"telefone_comprador\", \"telefone_recebedor\", \"produto\".\n\nNão inclua a mensagem do cartão nem outras informações.\n\nTexto:\n{mensagem}"
+}
